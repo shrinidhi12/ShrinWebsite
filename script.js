@@ -20,7 +20,7 @@ const EVENTS = [
     id: 'e2',
     title: 'AI For Social Good',
     date: 'Wed, Apr 16, 2026',
-    time: '8:00–10:00 PM ET',
+    time: '4:00–6:00 PM EDT',
     location: 'Collider Studio, 54 Franklin St, New York, NY',
     platform: 'luma',
     thumbnail: 'https://images.lumacdn.com/cdn-cgi/image/format=auto,fit=cover,dpr=2,background=white,quality=75,width=400,height=400/gallery-images/0n/c4b8aff1-e354-412f-847c-ce0ff6a98dab.png',
