@@ -2,22 +2,28 @@
    TOKENS
    ============================================================ */
 :root {
-  --cream:       #FAF7F2;
+  --cream:       #111009;
   --teal:        #2A7C6F;
   --teal-dark:   #1F5E54;
   --terracotta:  #C4622D;
-  --sand:        #E8DFD0;
-  --charcoal:    #1A1A1A;
-  --gray:        #6B6560;
+  --sand:        #2E2A24;
+  --charcoal:    #E8E0D5;
+  --gray:        #8A8077;
   --domain-1:    #5A8A6E;
   --domain-2:    #C8922A;
   --domain-3:    #B85C6E;
+
+  --bg-card:     #1C1A17;
+  --bg-card2:    #17150F;
+  --header-bg:   #1C1A17;
+  --gold:        #D4A847;
+  --terracotta-dk: #A3501E;
 
   --radius-sm:   6px;
   --radius-md:   10px;
   --radius-lg:   16px;
 
-  --shadow-card: 0 1px 4px rgba(0,0,0,.07), 0 4px 16px rgba(0,0,0,.05);
+  --shadow-card: 0 1px 4px rgba(0,0,0,.4), 0 4px 16px rgba(0,0,0,.3);
   --transition:  200ms ease;
 }
 
@@ -58,7 +64,7 @@ a {
 }
 
 a:hover {
-  color: var(--teal-dark);
+  color: var(--gold);
 }
 
 img {
@@ -90,9 +96,10 @@ footer {
    HEADER
    ============================================================ */
 header {
-  background: var(--teal);
-  color: #fff;
+  background: var(--header-bg);
+  color: var(--charcoal);
   padding-block: 2rem 0;
+  border-bottom: 1px solid var(--sand);
 }
 
 .header-inner {
@@ -103,12 +110,12 @@ header {
 
 .header-title h1 {
   font-size: clamp(1.75rem, 4vw, 2.6rem);
-  color: #fff;
+  color: var(--charcoal);
   letter-spacing: -0.02em;
 }
 
 .tagline {
-  color: rgba(255,255,255,.78);
+  color: var(--gray);
   font-size: 0.95rem;
   margin-top: 0.35rem;
   font-weight: 400;
@@ -125,7 +132,7 @@ header {
   background: transparent;
   border: none;
   cursor: pointer;
-  color: rgba(255,255,255,.7);
+  color: var(--gray);
   font-family: 'Inter', sans-serif;
   font-size: 0.9rem;
   font-weight: 500;
@@ -137,14 +144,14 @@ header {
 }
 
 .tab-btn:hover {
-  color: #fff;
-  background: rgba(255,255,255,.08);
+  color: var(--charcoal);
+  background: rgba(255,255,255,.05);
 }
 
 .tab-btn.active {
-  color: #fff;
-  border-bottom-color: #fff;
-  background: rgba(255,255,255,.12);
+  color: var(--charcoal);
+  border-bottom-color: var(--terracotta);
+  background: rgba(196,98,45,.12);
 }
 
 /* ============================================================
@@ -167,7 +174,7 @@ main {
   color: var(--charcoal);
   margin-bottom: 1.25rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--sand);
+  border-bottom: 2px solid var(--gold);
 }
 
 /* ============================================================
@@ -180,8 +187,8 @@ main {
 }
 
 .event-card {
-  background: #fff;
-  border: 1px solid var(--sand);
+  background: var(--bg-card);
+  border: 1px solid rgba(196,98,45,.3);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-card);
   display: flex;
@@ -207,7 +214,7 @@ main {
 }
 
 .event-card:hover {
-  box-shadow: 0 4px 20px rgba(0,0,0,.1);
+  box-shadow: 0 4px 20px rgba(196,98,45,.2);
   transform: translateY(-2px);
 }
 
@@ -238,9 +245,9 @@ main {
   color: var(--gray);
 }
 
-.platform-badge.partiful  { background: #f0e8ff; color: #6b3fa0; }
-.platform-badge.luma      { background: #dff0ff; color: #1a6fa0; }
-.platform-badge.eventbrite{ background: #fff0e0; color: #c25c00; }
+.platform-badge.partiful  { background: #2A1A3E; color: #B88FDD; }
+.platform-badge.luma      { background: #0D1E2E; color: #5AAFE0; }
+.platform-badge.eventbrite{ background: #2A1500; color: #E0924D; }
 
 .event-meta {
   font-size: 0.85rem;
@@ -251,7 +258,7 @@ main {
 }
 
 .event-meta strong {
-  color: var(--teal);
+  color: var(--gold);
 }
 
 .event-description {
@@ -264,7 +271,7 @@ main {
   display: inline-block;
   margin-top: 0.5rem;
   padding: 0.5rem 1.1rem;
-  background: var(--teal);
+  background: var(--terracotta);
   color: #fff;
   text-decoration: none;
   border-radius: var(--radius-sm);
@@ -275,7 +282,7 @@ main {
 }
 
 .event-rsvp:hover {
-  background: var(--teal-dark);
+  background: var(--terracotta-dk);
   color: #fff;
 }
 
@@ -300,7 +307,7 @@ main {
   border: 1px solid var(--sand);
   border-radius: var(--radius-md);
   overflow: hidden;
-  background: #fff;
+  background: var(--bg-card);
   box-shadow: var(--shadow-card);
 }
 
@@ -318,11 +325,11 @@ main {
 }
 
 .accordion-header:hover {
-  background: var(--cream);
+  background: var(--bg-card2);
 }
 
 .accordion-header:focus-visible {
-  outline: 2px solid var(--teal);
+  outline: 2px solid var(--terracotta);
   outline-offset: -2px;
 }
 
@@ -387,6 +394,7 @@ main {
 
 .accordion-body-inner {
   overflow: hidden;
+  background: var(--bg-card2);
 }
 
 /* ============================================================
@@ -400,7 +408,7 @@ main {
 }
 
 .project-card {
-  background: var(--cream);
+  background: var(--bg-card);
   border: 1px solid var(--sand);
   border-radius: var(--radius-md);
   padding: 1.1rem 1.25rem;
@@ -411,7 +419,7 @@ main {
 }
 
 .project-card:hover {
-  box-shadow: 0 2px 12px rgba(0,0,0,.09);
+  box-shadow: 0 2px 12px rgba(196,98,45,.15);
   transform: translateY(-1px);
 }
 
@@ -442,7 +450,7 @@ main {
 }
 
 .project-link:hover {
-  color: var(--teal-dark);
+  color: var(--gold);
   text-decoration: underline;
 }
 
@@ -481,7 +489,7 @@ main {
   width: 160px;
   height: 160px;
   border-radius: 50%;
-  background: var(--teal);
+  background: var(--terracotta);
   color: #fff;
   font-family: 'Fraunces', Georgia, serif;
   font-size: 2.4rem;
@@ -490,7 +498,7 @@ main {
   align-items: center;
   justify-content: center;
   letter-spacing: 0.02em;
-  box-shadow: 0 4px 20px rgba(42,124,111,.25);
+  box-shadow: 0 4px 20px rgba(196,98,45,.35);
   flex-shrink: 0;
 }
 
@@ -512,13 +520,13 @@ main {
   padding: 0.5rem 0.75rem;
   border-radius: var(--radius-sm);
   border: 1px solid var(--sand);
-  background: #fff;
+  background: var(--bg-card);
   transition: background var(--transition), border-color var(--transition), color var(--transition);
 }
 
 .social-link:hover {
-  background: var(--teal);
-  border-color: var(--teal);
+  background: var(--terracotta);
+  border-color: var(--terracotta);
   color: #fff;
 }
 
@@ -530,7 +538,7 @@ main {
 
 .about-role {
   font-size: 1rem;
-  color: var(--teal);
+  color: var(--gold);
   font-weight: 600;
   margin-bottom: 1.25rem;
 }
@@ -575,7 +583,7 @@ footer {
    FOCUS STYLES
    ============================================================ */
 :focus-visible {
-  outline: 2px solid var(--teal);
+  outline: 2px solid var(--terracotta);
   outline-offset: 2px;
   border-radius: 3px;
 }
